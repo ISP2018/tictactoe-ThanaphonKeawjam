@@ -24,6 +24,11 @@ public class Piece extends StackPane {
 	/** Type type of the piece.  Its public final for efficiency in checking board state. */
 	public final Player type;
 	
+	/**
+	 * Initialize.
+	 * @param type is type of player.
+	 * @param size is size of text.
+	 */
 	public Piece(Player type, double size) {
 		this.type = type;
 		this.text = new Text(type.text);
