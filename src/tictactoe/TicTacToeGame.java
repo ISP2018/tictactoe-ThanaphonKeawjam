@@ -111,18 +111,31 @@ public class TicTacToeGame {
 			}
 			return p;
 		}
-		// Look for N matching pieces on downward diagonal.
+		
 		Player p = pieces[0][0].type;
-		if (p != Player.NONE && p == pieces[1][1].type && p == pieces[2][2].type) {
-			// all pieces on diagonal occupied by same type (Player)
-			return p;
+		if(p != Player.NONE) {
+			int count1 = 1;
+			for(int i = 1; i < boardsize; i++) {
+				if(p == pieces[i][i].type) count1++;
+				else count1 = 0;
+				
+				if(count1 == boardsize) return p;
+			}
 		}
-		// Look for N matching pieces on upward diagonal
-		p = pieces[0][2].type; // start at lower-left corner
-		if (p != Player.NONE && p == pieces[1][1].type && p == pieces[2][0].type) {
-			// all pieces on diagonal occupied by same type (Player)
-			return p;
+		
+		int up = boardsize - 1;
+		p = pieces[0][up].type;
+		if(p != Player.NONE) {
+			int count2 = 1;
+			for(int i = 1; i < boardsize; i++) {
+				if(p == pieces[i][up-i].type) count2++;
+				else count2 = 0;
+				
+				if(count2 == boardsize) return p;
+			}
 		}
+		
+		
 		return Player.NONE;
 	}
 	

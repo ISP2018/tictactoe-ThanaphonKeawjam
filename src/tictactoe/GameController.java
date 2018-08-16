@@ -25,7 +25,7 @@ public class GameController {
 	
 	private TicTacToeGame game;
 	
-	private static int tableSize = 3;
+	private static int tableSize = 4;
 	
 
 	/**
