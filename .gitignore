@@ -3,6 +3,7 @@
 *.temp
 bin/
 build/
+lib/
 
 # Eclipse project files
 .classpath
