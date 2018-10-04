@@ -23,10 +23,3 @@ jdk:
 
 script:
   - ant test
-  - ant clean
-  - ant comile
-  - ant deps
-  - ant init
-  - ant jar
-  - ant run
-  - ant test-compile
